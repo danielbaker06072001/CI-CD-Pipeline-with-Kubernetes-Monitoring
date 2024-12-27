@@ -8,3 +8,10 @@ sudo apt install ansible -y
 
 -   always start with ansible-playbook then -i then name of host, and main.yml
     ansible-playbook -i inventory/hosts main.yml
+
+# How this run
+- Initially, I set up 1 ansible control server to run all command to other server
+
+- ![image](https://github.com/user-attachments/assets/dab5644f-81d4-437b-a77d-d2eed61a6ddf)
+
+- The ansible will be installed in the ansible-control server, and run install on many different machines with different groups using variable, etc
