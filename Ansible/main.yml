@@ -6,7 +6,7 @@
         ansible.builtin.debug:
             var: ansible_hostname
       - name: Print install sonarqube
-      shell: |
-          sudo apt update -y
-          sudo apt install docker.io -y
-          sudo docker run -d --name sonarqube -p 9000:9000 sonarqube
+        shell: |
+            sudo apt update -y
+            sudo apt install docker.io -y
+            sudo docker run -d --name sonarqube -p 9000:9000 sonarqube
