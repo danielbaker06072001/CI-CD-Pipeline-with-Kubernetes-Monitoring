@@ -1,5 +1,5 @@
 - name: ansible-tooa12
-  host: tooa12
+  hosts: tooa12
   gather_facts: true
   tasks:
       - name: Print all available facts
