@@ -16,3 +16,8 @@ sudo apt install ansible -y
 
 - The ansible will be installed in the ansible-control server, and run install on many different machines with different groups using variable, etc
 ![image](https://github.com/user-attachments/assets/26ae5862-0359-4282-8bec-d0ed7b8223b2)
+
+# For better security, we will encrypt the yml file , each time we run, we need to provide password
+
+![image](https://github.com/user-attachments/assets/e904828a-7b32-49b6-b494-619aa89ccb02)
+
