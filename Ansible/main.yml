@@ -5,8 +5,17 @@
       - name: Print all available facts
         ansible.builtin.debug:
             var: ansible_hostname
-      - name: Print install sonarqube
-        shell: |
-            sudo apt update -y
-            sudo apt install docker.io -y
-            sudo docker run -d --name sonarqube -p 9000:9000 sonarqube
+      # - name: Print install sonarqube
+      #   shell: |
+      #       sudo apt update -y
+      #       sudo apt install docker.io -y
+      #       sudo docker run -d --name sonarqube -p 9000:9000 sonarqube
+      - name: Check java version
+        shell: java -version
+        register: java_version
+
+      - name: Set fact java version
+        set_fact: version_java = "{{ java_version.stdout }}"
+      - name: Print java version
+        ansible.builtin.debug:
+            var: version_java
