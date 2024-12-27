@@ -22,6 +22,8 @@ sudo apt install ansible -y
 ansible-vault encrypt main.yml
 ansible-vault decrypt main.yml
 
+However, we will use the --ask-vault-pass to make it more secure so we dont have to encrypt again
+ansible-playbook -i inventory/hosts main.yml --ask-vault-pass
 
 ![image](https://github.com/user-attachments/assets/e904828a-7b32-49b6-b494-619aa89ccb02)
 
