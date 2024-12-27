@@ -1,0 +1,12 @@
+- name: ansible-tooa12
+  host: tooa12
+  gather_facts: true
+  tasks:
+      - name: Print all available facts
+        ansible.buitin.debug:
+            var: ansible_facts
+      - name: Print install sonarqube
+        # shell: |
+        #     sudo apt update -y
+        #     sudo apt install docker.io -y
+        #     sudo docker run -d --name sonarqube -p 9000:9000 sonarqube

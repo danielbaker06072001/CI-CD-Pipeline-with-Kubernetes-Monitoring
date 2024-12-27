@@ -1,0 +1,8 @@
+[tooa12]
+98.81.233.235
+52.200.156.32
+100.24.38.195
+
+[all:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=/home/ubuntu/duc-nguyen.pem
