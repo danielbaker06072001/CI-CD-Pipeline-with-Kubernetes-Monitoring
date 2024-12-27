@@ -15,3 +15,4 @@ sudo apt install ansible -y
 - ![image](https://github.com/user-attachments/assets/dab5644f-81d4-437b-a77d-d2eed61a6ddf)
 
 - The ansible will be installed in the ansible-control server, and run install on many different machines with different groups using variable, etc
+![image](https://github.com/user-attachments/assets/26ae5862-0359-4282-8bec-d0ed7b8223b2)
