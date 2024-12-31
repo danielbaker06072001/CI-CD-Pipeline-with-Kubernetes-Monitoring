@@ -1,3 +1,10 @@
+# Usage
+- sometime, we wanted to check the version of each instances
+- we wanted to update, etc
+- we can found the error in each version
+- mostly, when we have many server, this will be the help
+- in the scenario if we have 200-500 instances, doing it manually will be pain, however this will provide us a better solution
+
 # initial set up
 
 sudo apt update
