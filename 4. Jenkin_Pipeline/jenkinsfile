@@ -1,0 +1,66 @@
+pipeline {
+    agent {
+        label 'slave'
+    } 
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out code..'
+                deleteDir()
+                checkout scmGit(
+                    branches: [[name: '*/main']],
+                    extensions: [],
+                    userRemoteConfigs: [[
+                        url: 'https://oauth2:<key_pat>@gitlab.com/<jenkin_agent>/node_app.git'
+                    ]]
+                )
+                sh 'ls -la'
+            }
+        }
+
+        stage('Sonarqube Scanner') { 
+            steps {
+                sh '/home/ubuntu/sonar/sonar-scanner-6.2.1.4610-linux-x64/bin/sonar-scanner -Dsonar.projectKey=<proj_key> -Dsonar.sources=. -Dsonar.host.url=http://<server>:9000 -Dsonar.login=<pat_from_sonar>'
+            }
+        }
+
+        stage('Clone or Pull Repository') {
+            steps {
+                echo 'Cloning or pulling latest changes..'
+                sh 'git clone https://oauth2:<key_pat>@gitlab.com/<jenkin_agent>/node_app.git'
+                sh 'ls -la'
+            }
+        }
+
+        stage('Build Images') { 
+            steps {
+                echo 'Building Docker image..'
+                sh 'cd node_app'
+                sh 'sudo apt install docker.io -y'
+                sh 'sudo docker build -t <your_docker_hub>:v.${BUILD_NUMBER}.${BRANCH_NAME} .'
+            }
+        }
+
+        stage('Push code to Docker Hub') {
+            steps {
+                sh 'sudo docker login -u <docker_hub_username> -p <docker_hub_password>'
+                sh 'sudo docker tag <your_docker_hub>:v.${BUILD_NUMBER}.${BRANCH_NAME}  <your_docker_hub>:v.${BUILD_NUMBER}.${BRANCH_NAME}'
+                sh 'sudo docker push <your_docker_hub>:v.${BUILD_NUMBER}.${BRANCH_NAME}'
+            }
+        }
+
+        stage('Clean Local Docker Images') {
+            steps {
+                sh 'sudo docker rmi <your_docker_hub>:v.${BUILD_NUMBER}.${BRANCH_NAME}'
+            }
+        }
+
+        stage('Deplying to K8S') { 
+            steps {
+                echo 'Deploying to K8S..'
+                sh 'kubectl set image deployment node-app ${BRANCH_NAME}=<your_docker_hub>:v.${BUILD_NUMBER}.${BRANCH_NAME} -n ${BRANCH_NAME}'
+            }
+        }
+    }
+}
