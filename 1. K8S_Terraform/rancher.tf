@@ -2,7 +2,7 @@
 resource "aws_instance" "rancher" {
     ami           = "ami-0cd59ecaf368e5ccf"
     instance_type = "t2.medium" # recommended t3, however i'm broke
-    key_name="your key name"
+    key_name="your_key_name"
     user_data = <<-EOL
     #!/bin/bash
     sudo apt update 

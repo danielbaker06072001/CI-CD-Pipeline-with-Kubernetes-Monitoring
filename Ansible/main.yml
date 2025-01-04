@@ -10,8 +10,8 @@
       #       sudo apt update -y
       #       sudo apt install docker.io -y
       #       sudo docker run -d --name sonarqube -p 9000:9000 sonarqube
-      - name: Instsall java
-        shell: sudo apt install openjdk-17-jre
+      # - name: Instsall java
+      #   shell: sudo apt install openjdk-17-jre
       - name: Check java version
         shell: java -version
         register: java_version
