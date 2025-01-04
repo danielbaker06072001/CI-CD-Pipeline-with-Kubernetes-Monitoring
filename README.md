@@ -26,6 +26,9 @@ https://youtu.be/JuYIE03daUA
 
 https://github.com/user-attachments/assets/1df6327c-b1c7-41a4-95ca-12a46ddd63aa
 
+# Docker image after build
+![image](https://github.com/user-attachments/assets/d0c0f46a-37ab-4206-b36c-9429f5eeca8f)
+
 
 ## Project Structure
 
