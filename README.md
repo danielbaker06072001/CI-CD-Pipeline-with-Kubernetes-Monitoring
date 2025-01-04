@@ -18,7 +18,11 @@ This project demonstrates a complete end-to-end CI/CD pipeline using Jenkins, Ku
 
 https://github.com/user-attachments/assets/863f4a5c-71e0-419e-9d96-f69aa7991fbd
 
+
+[SECOND VIDEO OVER HERE]
 https://youtu.be/JuYIE03daUA
+
+
 
 https://github.com/user-attachments/assets/1df6327c-b1c7-41a4-95ca-12a46ddd63aa
 
