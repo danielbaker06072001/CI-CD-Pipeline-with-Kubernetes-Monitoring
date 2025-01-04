@@ -5,7 +5,23 @@
 **Description:**  
 This project demonstrates a complete end-to-end CI/CD pipeline using Jenkins, Kubernetes, and Terraform. It ensures high availability, automated deployments, and comprehensive monitoring. The initial study and development time for this project was around 6 months, completed during my winter break.
 
+** Required Server:
+- 3 Master Instances
+- 1 Load Balancer
+- 3 Worker Instances
+- 1 Installer Instances installing Jenkin Slave 
+- 1 Jenkin Master Instances
+- 1 Sonarqube Instances 
 ---
+
+## Demo Video, Follow in order
+
+https://github.com/user-attachments/assets/863f4a5c-71e0-419e-9d96-f69aa7991fbd
+
+https://youtu.be/JuYIE03daUA
+
+https://github.com/user-attachments/assets/1df6327c-b1c7-41a4-95ca-12a46ddd63aa
+
 
 ## Project Structure
 
