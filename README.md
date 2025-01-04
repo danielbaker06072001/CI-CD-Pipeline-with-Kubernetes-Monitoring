@@ -14,6 +14,14 @@ This project demonstrates a complete end-to-end CI/CD pipeline using Jenkins, Ku
 - 1 Sonarqube Instances 
 ---
 
+## Features
+
+![image](https://github.com/user-attachments/assets/d0cbc11c-c7ec-4288-bffc-3287bb1573fa)
+![image](https://github.com/user-attachments/assets/f98b96ab-7788-4d74-9f8e-d4ac223a5824)
+![image](https://github.com/user-attachments/assets/5f7aa053-739f-4b0b-bbd1-ea3e4c71e95b)
+![Uploading image.png…]()
+
+
 ## Demo Video, Follow in order
 
 https://github.com/user-attachments/assets/863f4a5c-71e0-419e-9d96-f69aa7991fbd
