@@ -62,7 +62,7 @@ https://github.com/user-attachments/assets/1df6327c-b1c7-41a4-95ca-12a46ddd63aa
    *[Refer to the `README.md` inside for setup instructions]*
 
 6. **Ansible**  
-   Ansible playbooks for automating configuration tasks.  
+   Ansible playbooks for automating configuration tasks. However, not much here, it was just some few basic configures
    *[Refer to the `README.md` inside for setup instructions]*
 
 ---
